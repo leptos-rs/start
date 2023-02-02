@@ -23,7 +23,7 @@ to generate a new project template.
 
 to go to your newly created project.
 
-Of course you should explore around the project structure, but the best place to start with your application code is in `src/app/mod.rs`.
+Of course you should explore around the project structure, but the best place to start with your application code is in `src/app.rs`.
 
 ## Running your project
 
