@@ -12,12 +12,12 @@ actix-web = { version = "4", optional = true, features = ["macros"] }
 console_error_panic_hook = "0.1"
 console_log = "0.2"
 cfg-if = "1"
-leptos = { git = "https://github.com/leptos-rs/leptos", default-features = false, features = [
+leptos = { version = "0.2", default-features = false, features = [
   "serde",
 ] }
-leptos_meta = { git = "https://github.com/leptos-rs/leptos", default-features = false }
-leptos_actix = { git = "https://github.com/leptos-rs/leptos", optional = true }
-leptos_router = { git = "https://github.com/leptos-rs/leptos", default-features = false }
+leptos_meta = { version = "0.2", default-features = false }
+leptos_actix = { version = "0.2", optional = true }
+leptos_router = { version = "0.2", default-features = false }
 log = "0.4"
 simple_logger = "4"
 wasm-bindgen = "0.2"
