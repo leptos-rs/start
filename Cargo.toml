@@ -20,6 +20,7 @@ leptos_router = { version = "0.3", default-features = false }
 wasm-bindgen = "0.2.84"
 
 [features]
+ssg = ["leptos/csr"]
 hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]
 ssr = [
   "dep:actix-files",

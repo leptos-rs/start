@@ -31,9 +31,24 @@ async fn main() -> std::io::Result<()> {
     .await
 }
 
-#[cfg(not(feature = "ssr"))]
+#[cfg(all(not(feature = "ssr"), feature = "ssg"))]
 pub fn main() {
-    // no client-side main function
-    // unless we want this to work with e.g., Trunk for pure client-side testing
-    // see lib.rs for hydration function instead
+    /// ~~no client-side main function~~
+    /// ~~unless we want this to work with e.g., Trunk for pure client-side testing~~
+    /// ~~see lib.rs for hydration function instead~~
+
+		// a client-side main function is required for using `trunk serve`
+		// prefer using `cargo leptos serve` instead
+		// to run: `trunk serve --open --features ssg`
+		use leptos::*;
+		use leptos_start::app::*;
+		use wasm_bindgen::prelude::wasm_bindgen;
+
+		console_error_panic_hook::set_once();
+
+		leptos::mount_to_body(move |cx| {
+				// note: for testing it may be preferrable to replace this with a
+				// more specific component, although leptos_router should still work
+				view! {cx, <App/> }
+		});
 }
