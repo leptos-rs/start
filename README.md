@@ -60,8 +60,8 @@ LEPTOS_RELOAD_PORT="3001"
 Finally, run the server binary.
 
 ## Notes about SSG and Trunk:
-Although it is not recommended, you can also run your project without server integration using the feature `ssg` and `trunk serve`:
+Although it is not recommended, you can also run your project without server integration using the feature `csr` and `trunk serve`:
 
-`trunk serve --open --features ssg`
+`trunk serve --open --features csr`
 
 This may be useful for integrating external tools which require a static site, e.g. `tauri`.
