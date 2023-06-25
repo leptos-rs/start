@@ -23,7 +23,7 @@ to generate a new project template.
 
 to go to your newly created project.
 
-Of course you should explore around the project structure, but the best place to start with your application code is in `src/app.rs`.
+Of course, you should explore around the project structure, but the best place to start with your application code is in `src/app.rs`.
 
 ## Running your project
 
@@ -49,7 +49,7 @@ Copy these files to your remote server. The directory structure should be:
 leptos_start
 site/
 ```
-Set the following enviornment variables (updating for your project as needed):
+Set the following environment variables (updating for your project as needed):
 ```sh
 export LEPTOS_OUTPUT_NAME="leptos_start"
 export LEPTOS_SITE_ROOT="site"
