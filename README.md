@@ -59,7 +59,7 @@ export LEPTOS_RELOAD_PORT="3001"
 ```
 Finally, run the server binary.
 
-## Notes about SSG and Trunk:
+## Notes about CSR and Trunk:
 Although it is not recommended, you can also run your project without server integration using the feature `csr` and `trunk serve`:
 
 `trunk serve --open --features csr`
