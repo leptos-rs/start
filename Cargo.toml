@@ -30,6 +30,14 @@ ssr = [
   "leptos_router/ssr",
 ]
 
+# Defines a size-optimized profile for the WASM bundle in release mode
+[profile.wasm-release]
+inherits = "release"
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = "abort"
+
 [package.metadata.leptos]
 # The name used by wasm-bindgen/cargo-leptos for the JS/WASM bundle. Defaults to the crate name   
 output-name = "leptos_start"
@@ -79,3 +87,8 @@ lib-features = ["hydrate"]
 #
 # Optional. Defaults to false.
 lib-default-features = false
+
+# The profile to use for the lib target when compiling for release
+#
+# Optional. Defaults to "release".
+lib-profile-release = "wasm-release"
