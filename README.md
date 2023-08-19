@@ -17,7 +17,7 @@ Then run
 
 `cargo leptos new --git leptos-rs/start`
 
-to generate a new project template.
+to generate a new project template (you will be prompted to enter a project name).
 
 `cd {projectname}`
 
@@ -28,6 +28,7 @@ Of course, you should explore around the project structure, but the best place t
 ## Running your project
 
 `cargo leptos watch`
+By default access your local project at `http://localhost:3000`
 
 ## Installing Additional Tools
 
