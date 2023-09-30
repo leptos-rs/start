@@ -11,6 +11,7 @@ async fn main() -> std::io::Result<()> {
     let addr = conf.leptos_options.site_addr;
     // Generate the list of routes in your Leptos App
     let routes = generate_route_list(App);
+    println!("listening on http://{}", &addr);
 
     HttpServer::new(move || {
         let leptos_options = &conf.leptos_options;
