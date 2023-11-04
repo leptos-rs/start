@@ -4,13 +4,11 @@ async fn main() -> std::io::Result<()> {
     use actix_files::Files;
     use actix_web::*;
     use leptos::*;
-    use leptos_actix::{generate_route_list, LeptosRoutes};
+    use leptos_actix::LeptosRoutes;
     use {{crate_name}}::app::*;
 
     let conf = get_configuration(None).await.unwrap();
     let addr = conf.leptos_options.site_addr;
-    // Generate the list of routes in your Leptos App
-    let routes = generate_route_list(App);
     println!("listening on http://{}", &addr);
 
     HttpServer::new(move || {
@@ -25,7 +23,7 @@ async fn main() -> std::io::Result<()> {
             .service(Files::new("/assets", site_root))
             // serve the favicon from /favicon.ico
             .service(favicon)
-            .leptos_routes(leptos_options.to_owned(), routes.to_owned(), App)
+            .leptos_routes(leptos_options.to_owned(), App)
             .app_data(web::Data::new(leptos_options.to_owned()))
         //.wrap(middleware::Compress::default())
     })
