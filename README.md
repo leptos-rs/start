@@ -66,3 +66,7 @@ Although it is not recommended, you can also run your project without server int
 `trunk serve --open --features csr`
 
 This may be useful for integrating external tools which require a static site, e.g. `tauri`.
+
+## Licensing
+
+This template itself is released under the Unlicense. You should replace the LICENSE for your own application with an appropriate license if you plan to release it publicly.
