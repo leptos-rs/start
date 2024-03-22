@@ -35,8 +35,30 @@ fn HomePage() -> impl IntoView {
     let on_click = move |_| set_count.update(|count| *count += 1);
 
     view! {
-        <h1>"Welcome to Leptos!"</h1>
-        <button on:click=on_click>"Click Me: " {count}</button>
+        <div class="header">
+            <div>
+                <img src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_pref_dark_RGB.svg" alt="Leptos Logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="btn-simple" href="https://github.com/leptos-rs/leptos">GitHub</a>
+                    </li>
+                    <li>
+                        <a class="btn-simple" href="https://leptos.dev">Docs</a>
+                    </li>
+                    <li>
+                        <a class="btn-different" href="https://book.leptos.dev">Get Started</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container">
+            <img src="../assets/logo.png" alt="Leptos Logo" />
+            <h1>"Welcome to Leptos!"</h1>
+            <button on:click=on_click>"Click Me: " {count}</button>
+        </div>
     }
 }
 
