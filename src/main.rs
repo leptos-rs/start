@@ -58,9 +58,7 @@ pub fn main() {
     // a client-side main function is required for using `trunk serve`
     // prefer using `cargo leptos serve` instead
     // to run: `trunk serve --open --features csr`
-    use leptos::*;
     use {{crate_name}}::app::*;
-    use wasm_bindgen::prelude::wasm_bindgen;
 
     console_error_panic_hook::set_once();
 
