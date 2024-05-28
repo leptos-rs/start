@@ -1,5 +1,4 @@
-import { defineConfig } from "@playwright/test";
-import { devices } from "@playwright/test";
+import { devices, defineConfig } from "@playwright/test";
 
 /**
  * Read environment variables from file.
